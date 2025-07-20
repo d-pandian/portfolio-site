@@ -10,13 +10,9 @@ const Footer = () => {
     <div className="py-12 bg-primary/5">
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-5 lg:gap-20">
         <div className="flex flex-col gap-3 lg:col-span-3">
-          <Logo className="w-[88px]">Christian</Logo>
+          <Logo className="w-[88px]">Pandian</Logo>
           <p className="text-sm tracking-wide">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Blanditiis, eius! Ea, rem doloremque libero atque sunt veniam
-            molestias eligendi culpa, consequatur sint minus deserunt delectus
-            ex porro voluptatem commodi eveniet iusto facilis corrupti magni sit
-            odio quae.
+          I’m Pandian, a passionate Full Stack Developer skilled in the MERN stack. I actively share my code on GitHub and grow my professional network via LinkedIn. If you’d like to connect, collaborate, or just say hi feel free to drop me a message!
           </p>
           <SocialLinks />
         </div>

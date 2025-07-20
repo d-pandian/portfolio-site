@@ -19,11 +19,11 @@ const Banner = () => {
                 Developer
               </span>
             </span>
-            Christian Rolan
+            Pandian D
           </h2>
           <p className="text-base font-medium tracking-wide">
             Building and deploying websites for{" "}
-            <span className="font-bold">6+ years</span> <br />
+            <span className="font-bold">1+ years</span> <br />
             as a Web Developer.
           </p>
           <div className="flex items-center gap-5 text-sm font-bold tracking-wide">
@@ -38,22 +38,14 @@ const Banner = () => {
               <MoveUpRight className="w-4 h-4 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
-          <div>
-            <h2 className="text-2xl font-bold">
-              <Counter end={105} />+
-            </h2>
-            <p className="text-base font-medium leading-5 mt-1">
-              Clients on work <br />
-              worldwide
-            </p>
-          </div>
+          
           <div className="flex items-center gap-20 md:gap-32">
             <div>
               <h2 className="text-2xl font-bold">
-                <Counter end={450} />+
+                Location
               </h2>
               <p className="text-base font-medium leading-5 mt-1">
-                Project Done
+              Bangalore/Chennai/Mumbai/Hydrabad 
               </p>
             </div>
             <div>
@@ -62,7 +54,7 @@ const Banner = () => {
                 href="mailto:reactjsbd@gmail.com"
                 className="text-base font-medium"
               >
-                reactjsbd@gmail.com
+                pandya07844@gmail.com
               </Link>
             </div>
           </div>

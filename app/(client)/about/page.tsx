@@ -22,7 +22,7 @@ const BlogPage = () => {
               Full Stack Developer
             </div>
             <h1 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-darkColor sm:text-4xl">
-              Christian Rolan
+              Pandian D
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-darkColor/80">
               Passionate about building scalable and efficient software
@@ -34,27 +34,12 @@ const BlogPage = () => {
         <div className="px-8 py-6">
           <h2 className="text-2xl font-bold mb-4">About Me</h2>
           <p className="text-darkColor/80 mb-4">
-            With over 7 years of experience in software development, I
-            specialize in creating robust and user-friendly applications. My
-            expertise spans across full-stack development, with a particular
-            focus on JavaScript technologies like React and Node.js. Lorem
-            ipsum, dolor sit amet consectetur adipisicing elit. Quam id non
-            excepturi a tempora veritatis earum aut ab quia veniam! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ad quisquam dignissimos
-            error nulla necessitatibus quae esse? Minima, veritatis autem! Autem
-            quia assumenda, doloremque labore possimus repellat illum accusamus
-            quae nostrum! Ullam nam nemo aliquid ratione atque commodi modi
-            dolor minus, iusto itaque reprehenderit dolorum voluptatum illo
-            saepe, eos quas voluptatem.
+          With 1 year of professional experience as a Full Stack Developer at Thots2IT Technologies (Feb 2024 – Jan 2025), I have built and maintained enterprise-level web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js). My expertise lies in developing clean and efficient REST APIs, building responsive frontends with React and Tailwind CSS, managing data with MongoDB, and handling authentication flows using JWT and Clerk. I’ve also worked on integrating Stripe for secure payments, managing CMS content with Sanity, and collaborating with cross-functional teams using Agile methodology. I am passionate about clean code, scalable architecture, test-driven development, and continuously learning new technologies. Outside of coding, I enjoy contributing to open-source projects and mentoring junior developers to help them grow in their careers. My goal is to deliver solutions that not only meet business needs but also provide excellent user experiences.
           </p>
           <p className="text-darkColor/80 mb-4">
-            I&apos;m passionate about clean code, test-driven development, and
-            continuously learning new technologies. When I&apos;m not coding,
-            you can find me contributing to open-source projects or mentoring
-            junior developers. Lorem ipsum, dolor sit amet consectetur
-            adipisicing elit. Eveniet, natus quae. Voluptate, nesciunt. Vero,
-            sapiente! Doloribus, possimus? Alias optio, eligendi beatae tempore
-            illo, doloribus quos iure numquam recusandae commodi id.
+          I'm passionate about clean code, test-driven development, and continuously learning new technologies. As a MERN Stack Developer with hands-on experience in building full-stack applications, I thrive in turning complex problems into simple, scalable solutions. I actively contribute to open-source projects and enjoy mentoring junior developers to help them grow.
+
+When I’m not coding, you’ll find me exploring new tools in the JavaScript ecosystem or researching the latest trends in web development. I'm committed to writing maintainable, performant code and building meaningful digital experiences.
           </p>
         </div>
 
@@ -63,13 +48,27 @@ const BlogPage = () => {
           <div className="flex flex-wrap gap-2">
             {[
               "JavaScript",
-              "TypeScript",
-              "React",
-              "Node.js",
-              "Rust",
-              "Docker",
-              "AWS",
-              "Git",
+  "JavaScript",
+  "TypeScript",
+  "HTML5",
+  "CSS3",
+  "React.js",
+  "Next.js",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Framer Motion",
+  "Redux Toolkit",
+  "Zustand",
+  "ShadCN UI",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "PostgreSQL",
+  "Prisma",
+  "REST APIs",
+  "GraphQL",
+  "Responsive Web Design"
             ].map((skill) => (
               <span
                 key={skill}

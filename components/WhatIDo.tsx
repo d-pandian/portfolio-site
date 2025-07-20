@@ -8,25 +8,25 @@ const data = [
     icon: <Sparkle size={50} />,
     title: "Design",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A numquam maiores aut, perspiciatis laborum quos illo ipsum voluptatum tempore nesciunt incidunt eum sed aliquam deserunt.",
+      "We craft purposeful and visually compelling designs that align with your brand identity. From layout to typography, every element is thoughtfully structured to engage users and deliver intuitive, beautiful digital experiences",
   },
   {
     icon: <Dice5 size={50} />,
     title: "Branding",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A numquam maiores aut, perspiciatis laborum quos illo ipsum voluptatum tempore nesciunt incidunt eum sed aliquam deserunt.",
+      "We build powerful brand identities that leave lasting impressions. From logos to brand guidelines, we help define your voice, style, and story ensuring consistency and recognition across every platform",
   },
   {
     icon: <LoaderPinwheel size={50} />,
     title: "Innovative",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A numquam maiores aut, perspiciatis laborum quos illo ipsum voluptatum tempore nesciunt incidunt eum sed aliquam deserunt.",
+      "Our team thrives on fresh thinking, bold ideas, and breakthrough solutions that challenge the ordinary From concept to completion, innovation is the heartbeat of everything we do.",
   },
   {
     icon: <Box size={50} />,
     title: "Solutions",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A numquam maiores aut, perspiciatis laborum quos illo ipsum voluptatum tempore nesciunt incidunt eum sed aliquam deserunt.",
+      "We don’t just follow trends we set them Our team thrives on fresh thinking, bold ideas, and breakthrough solutions that challenge the ordinary From concept to completion, innovation is the heartbeat of everything we do",
   },
 ];
 

@@ -75,7 +75,7 @@ const Header = () => {
   return (
     <div className="bg-white sticky top-0 z-50 bg-white/70 backdrop-blur-md">
       <Container className="flex items-center justify-between gap-10 border-b border-b-darkColor/10 py-5">
-        <Logo>Christian</Logo>
+        <Logo>Pandian</Logo>
         <div className="hidden md:inline-flex items-center gap-7 font-semibold text-sm tracking-wide">
           {headerLinks?.map(({ label, href }) => (
             <Link

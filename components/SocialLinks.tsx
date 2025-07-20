@@ -3,25 +3,25 @@ import Link from "next/link";
 import React from "react";
 
 const footerData = [
-  { label: "Github", href: "https://github.com/noorjsdivs", icon: <Github /> },
+  { label: "Github", href: "https://github.com/d-pandian", icon: <Github /> },
   {
     label: "Youtube",
-    href: "https://www.youtube.com/@reactjsBD",
+    href: "https://www.youtube.com/@pandya076",
     icon: <Youtube />,
   },
   {
     label: "Linkedin",
-    href: "https://www.youtube.com/@reactjsBD",
+    href: "https://www.linkedin.com/in/pandian-d",
     icon: <Linkedin />,
   },
   {
     label: "Facebook",
-    href: "https://www.youtube.com/@reactjsBD",
+    href: "https://www.linkedin.com/in/pandian-d",
     icon: <Facebook />,
   },
   {
     label: "Email",
-    href: "https://www.youtube.com/@reactjsBD",
+    href: "https://www.linkedin.com/in/pandian-d",
     icon: <Mail />,
   },
 ];

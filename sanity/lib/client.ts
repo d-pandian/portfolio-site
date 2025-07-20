@@ -1,33 +1,18 @@
-import { createClient, type QueryParams } from "next-sanity";
-import { apiVersion, dataset, projectId } from "../env";
-
-const isDevelopment = process.env.NODE_ENV === "development";
-const developerToken = process.env.SANITY_API_TOKEN;
+import { createClient } from "next-sanity";
 
 export const client = createClient({
-  projectId,
-  dataset,
-  apiVersion,
-  useCdn: isDevelopment ? false : true,
-  token: developerToken,
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
+  apiVersion: "2023-10-01",
+  useCdn: true,
 });
 
-export const clientFetch = <const QueryString extends string>({
+export const clientFetch = async ({
   query,
   params = {},
-  // revalidate = 10,
-  tags = [],
 }: {
-  query: QueryString;
-  params?: QueryParams;
-  revalidate?: number | false;
-  tags?: string[];
+  query: string;
+  params?: Record<string, any>;
 }) => {
-  return client.fetch(query, params, {
-    next: {
-      // revalidate: isDevelopment || tags.length ? false : revalidate,
-      revalidate: 0,
-      tags,
-    },
-  });
+  return await client.fetch(query, params);
 };

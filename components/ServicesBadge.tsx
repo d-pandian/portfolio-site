@@ -6,19 +6,19 @@ const badgeArray = [
   {
     title: "Digital creativity",
     label:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sapiente ab, rem assumenda vel possimus doloremque distinctio aliquam eaque sint.",
+    " in the modern era, digital creativity drives innovation and transforms ideas into impactful experiences. It blends technology with imagination, enabling creators to design stunning visuals, compelling stories, and immersive digital environments. Whether it's graphic design, video production, animation, or interactive media, digital creativity unlocks limitless possibilities to connect, inspire, and engage audiences worldwide.",
     href: "/",
   },
   {
     title: "No coding needed",
     label:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sapiente ab, rem assumenda vel possimus doloremque distinctio aliquam eaque sint.",
+      "Empower your creativity without writing a single line of code. Our intuitive tools and platforms allow anyone—from beginners to experts—to build stunning digital projects easily. Focus on your ideas while we handle the technical complexities, making innovation accessible to all. Say goodbye to barriers and hello to seamless, code-free creation.",
     href: "/",
   },
   {
     title: "Finish quality",
     label:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut sapiente ab, rem assumenda vel possimus doloremque distinctio aliquam eaque sint.",
+      "Delivering excellence down to the finest detail. Our commitment ensures every project is completed with precision, durability, and a flawless finish. Experience superior craftsmanship that not only looks great but stands the test of time, giving your work a professional and polished edge",
     href: "/",
   },
 ];
@@ -32,9 +32,7 @@ const ServicesBadge = ({ className }: { className?: string }) => {
             <p className="text-base font-normal text-primary/80 my-5 md:my-8">
               {label}
             </p>
-            <button className="pr-4 text-sm font-bold border-r-primary hover:text-darkOrange hoverEffect after:w-[2px] after:h-[60%] after:bg-primary  after:absolute relative after:-right-1.5 after:top-0 hover:after:-rotate-45 before:w-[2px] before:h-[60%] before:bg-primary before:absolute before:-right-1.5 before:bottom-0 hover:before:rotate-45 hover:after:inline-block after:transition-all before:transition-all transform-rotate duration-500">
-              Read More
-            </button>
+            
           </div>
         ))}
       </Container>

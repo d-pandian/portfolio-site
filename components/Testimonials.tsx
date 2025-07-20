@@ -12,23 +12,23 @@ const data = [
   {
     title: "Testimonials",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur reprehenderit aperiam ad fugiat quia, commodi quo culpa explicabo nisi unde optio quam saepe eligendi inventore ab, voluptatem nam natus odio tempore corrupti similique expedita dolores? Molestias natus accusantium odio repellendus qui dolorem, libero autem, beatae debitis odit pariatur ab placeat",
-    author: "John Doe",
-    author_title: "Photographer",
+      "Pandian transformed our vision into a fully functional web app using the MERN stack. His attention to detail and dedication to clean, scalable code truly impressed our team.",
+    author: "Ravi K",
+    author_title: "Product Manager at HealthTech Startup",
   },
   {
     title: "Testimonials",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur reprehenderit aperiam ad fugiat quia, commodi quo culpa explicabo nisi unde optio quam saepe eligendi inventore ab, voluptatem nam natus odio tempore corrupti similique expedita dolores? Molestias natus accusantium odio repellendus qui dolorem, libero autem, beatae debitis odit pariatur ab placeat",
-    author: "Christopher Neil",
-    author_title: "Web Developer",
+      "We hired Pandian for a freelance eCommerce platform. His ability to handle frontend, backend, and database integration was exceptional. He even added AI-based suggestions",
+    author: "Sowmya N",
+    author_title: "Founder of DecorCart",
   },
   {
     title: "Testimonials",
     description:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur reprehenderit aperiam ad fugiat quia, commodi quo culpa explicabo nisi unde optio quam saepe eligendi inventore ab, voluptatem nam natus odio tempore corrupti similique expedita dolores? Molestias natus accusantium odio repellendus qui dolorem, libero autem, beatae debitis odit pariatur ab placeat",
-    author: "Nick Johns",
-    author_title: "Software Engineer",
+      "As a teammate, Pandian was collaborative and highly resourceful. He contributed to solving major React bugs during our project deadline rush. A true team player",
+    author: "Jyothi M",
+    author_title: "React Developer at Our Company",
   },
 ];
 
