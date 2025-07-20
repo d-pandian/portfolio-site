@@ -8,8 +8,19 @@ import { ArrowDown, ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
+interface Post {
+  slug: string;
+  title: string;
+  excerpt: string;
+  publishedAt: string;
+  author?: {
+    name: string;
+    image?: any;
+  };
+}
+
 const BlogPage = async () => {
-  const posts = await getAllPosts(10);
+  const posts: Post[] = await getAllPosts(10);
   return (
     <div>
       <section className="py-20 md:py-32 bg-gradient-to-r from-darkOrange to-darkBlue text-white">
@@ -36,7 +47,7 @@ const BlogPage = async () => {
             <div>no post</div>
           ) : (
             <div className="mt-6">
-              {posts.map((post) => (
+              {posts.map((post: Post) => (
                 <div
                   key={post.slug}
                   className="relative grid grid-cols-1 border-b border-b-gray-100 py-10 first:border-t first:border-t-gray-200 max-sm:gap-3 sm:grid-cols-3"
@@ -49,7 +60,7 @@ const BlogPage = async () => {
                       <div className="mt-2.5 flex items-center gap-3">
                         {post.author.image && (
                           <img
-                            alt=""
+                            alt="author"
                             src={image(post.author.image)
                               .width(64)
                               .height(64)
