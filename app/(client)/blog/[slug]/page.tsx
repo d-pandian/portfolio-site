@@ -2,6 +2,7 @@ import { OtherPosts } from "@/components/blog/others-posts";
 import Container from "@/components/Container";
 import { Heading, Subheading } from "@/components/text";
 import { image } from "@/sanity/image";
+
 import { getOtherPosts, getPost } from "@/sanity/queries";
 import dayjs from "dayjs";
 import { ChevronLeftIcon } from "lucide-react";
@@ -12,22 +13,28 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import React from "react";
 
+// ✅ Define Category type
+type Category = {
+  slug: string;
+  title: string;
+};
+
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug } = params;
   const post = await getPost(slug);
-
   return post ? { title: post.title, description: post.excerpt } : {};
 }
+
 const SingleBlogPage = async ({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) => {
-  const { slug } = await params;
+  const { slug } = params;
   const post = (await getPost(slug)) || notFound();
   const otherPosts = await getOtherPosts(slug, 3);
 
@@ -53,15 +60,13 @@ const SingleBlogPage = async ({
                     className="aspect-square size-6 rounded-full object-cover"
                   />
                 )}
-                <div className="text-sm/5 text-gray-700">
-                  {post.author.name}
-                </div>
+                <div className="text-sm/5 text-gray-700">{post.author.name}</div>
               </div>
             )}
 
             {Array.isArray(post.categories) && (
               <div className="flex flex-wrap gap-2">
-                {post.categories.map((category) => (
+                {post.categories.map((category: Category) => (
                   <Link
                     key={category.slug}
                     href={`/category/${category.slug}`}
@@ -89,9 +94,7 @@ const SingleBlogPage = async ({
                     components={{
                       block: {
                         normal: ({ children }) => (
-                          <p className="my-10 text-base/8 first:mt-0 last:mb-0">
-                            {children}
-                          </p>
+                          <p className="my-10 text-base/8 first:mt-0 last:mb-0">{children}</p>
                         ),
                         h2: ({ children }) => (
                           <h2 className="mb-10 mt-12 text-2xl/8 font-medium tracking-tight text-gray-950 first:mt-0 last:mb-0">
@@ -122,9 +125,7 @@ const SingleBlogPage = async ({
                         separator: ({ value }) => {
                           switch (value.style) {
                             case "line":
-                              return (
-                                <hr className="my-8 border-t border-gray-200" />
-                              );
+                              return <hr className="my-8 border-t border-gray-200" />;
                             case "space":
                               return <div className="my-8" />;
                             default:
@@ -134,57 +135,39 @@ const SingleBlogPage = async ({
                       },
                       list: {
                         bullet: ({ children }) => (
-                          <ul className="list-disc pl-4 text-base/8 marker:text-gray-400">
-                            {children}
-                          </ul>
+                          <ul className="list-disc pl-4 text-base/8 marker:text-gray-400">{children}</ul>
                         ),
                         number: ({ children }) => (
-                          <ol className="list-decimal pl-4 text-base/8 marker:text-gray-400">
-                            {children}
-                          </ol>
+                          <ol className="list-decimal pl-4 text-base/8 marker:text-gray-400">{children}</ol>
                         ),
                       },
                       listItem: {
-                        bullet: ({ children }) => {
-                          return (
-                            <li className="my-2 pl-2 has-[br]:mb-8">
-                              {children}
-                            </li>
-                          );
-                        },
-                        number: ({ children }) => {
-                          return (
-                            <li className="my-2 pl-2 has-[br]:mb-8">
-                              {children}
-                            </li>
-                          );
-                        },
+                        bullet: ({ children }) => (
+                          <li className="my-2 pl-2 has-[br]:mb-8">{children}</li>
+                        ),
+                        number: ({ children }) => (
+                          <li className="my-2 pl-2 has-[br]:mb-8">{children}</li>
+                        ),
                       },
                       marks: {
                         strong: ({ children }) => (
-                          <strong className="font-semibold text-gray-950">
-                            {children}
-                          </strong>
+                          <strong className="font-semibold text-gray-950">{children}</strong>
                         ),
                         code: ({ children }) => (
                           <>
                             <span aria-hidden>`</span>
-                            <code className="text-[15px]/8 font-semibold text-gray-950">
-                              {children}
-                            </code>
+                            <code className="text-[15px]/8 font-semibold text-gray-950">{children}</code>
                             <span aria-hidden>`</span>
                           </>
                         ),
-                        link: ({ value, children }) => {
-                          return (
-                            <Link
-                              href={value.href}
-                              className="font-medium text-gray-950 underline decoration-gray-400 underline-offset-4 data-[hover]:decoration-gray-600"
-                            >
-                              {children}
-                            </Link>
-                          );
-                        },
+                        link: ({ value, children }) => (
+                          <Link
+                            href={value.href}
+                            className="font-medium text-gray-950 underline decoration-gray-400 underline-offset-4 data-[hover]:decoration-gray-600"
+                          >
+                            {children}
+                          </Link>
+                        ),
                       },
                     }}
                   />
