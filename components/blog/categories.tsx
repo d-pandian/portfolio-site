@@ -16,6 +16,7 @@ export const Categories = async ({
   if (categories.length === 0) {
     return;
   }
+
   return (
     <div className="flex flex-wrap items-center justify-between gap-2">
       <Menu>
@@ -36,7 +37,8 @@ export const Categories = async ({
               <p className="col-start-2 text-sm/6">All categories</p>
             </Link>
           </MenuItem>
-          {categories.map((category) => (
+
+          {categories.map((category: { slug: string; title: string }) => (
             <MenuItem key={category.slug}>
               <Link
                 href={`/category/${category.slug}`}
@@ -49,6 +51,7 @@ export const Categories = async ({
           ))}
         </MenuItems>
       </Menu>
+
       {!noFeed && (
         <div className="gap-1 flex items-center">
           <RssIcon className="size-4" />

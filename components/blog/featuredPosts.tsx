@@ -1,13 +1,29 @@
-import { getFeaturedPosts } from "@/sanity/queries";
-import React from "react";
-
+import { getFeaturedPosts } from "@/sanity/queries"
 import Link from "next/link";
 import dayjs from "dayjs";
 import Container from "../Container";
 import { image } from "@/sanity/image";
 
+// ✅ Post type defined here
+type Post = {
+  slug: string;
+  title: string;
+  excerpt?: string;
+  publishedAt: string;
+  mainImage?: {
+    alt?: string;
+    asset: any;
+  };
+  author?: {
+    name: string;
+    image?: {
+      asset: any;
+    };
+  };
+};
+
 export const FeaturedPosts = async () => {
-  const featuredPosts = await getFeaturedPosts(3);
+  const featuredPosts: Post[] = await getFeaturedPosts(3);
   if (featuredPosts?.length === 0) {
     return;
   }
@@ -19,12 +35,12 @@ export const FeaturedPosts = async () => {
           My Featured Blog
         </h2>
         <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {featuredPosts.map((post) => (
+          {featuredPosts.map((post: Post) => (
             <div
               key={post.slug}
               className="relative flex flex-col rounded-3xl bg-white p-2 shadow-md shadow-black/5 ring-1 ring-black/5 group"
             >
-              <div className=" overflow-hidden rounded-2xl">
+              <div className="overflow-hidden rounded-2xl">
                 {post.mainImage && (
                   <img
                     alt={post.mainImage.alt || ""}

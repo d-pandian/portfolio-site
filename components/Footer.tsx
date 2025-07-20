@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 lg:col-span-3">
           <Logo className="w-[88px]">Pandian</Logo>
           <p className="text-sm tracking-wide">
-          I’m Pandian, a passionate Full Stack Developer skilled in the MERN stack. I actively share my code on GitHub and grow my professional network via LinkedIn. If you’d like to connect, collaborate, or just say hi feel free to drop me a message!
+            I&rsquo;m Pandian, a passionate Full Stack Developer skilled in the MERN stack. I actively share my code on GitHub and grow my professional network via LinkedIn. If you&rsquo;d like to connect, collaborate, or just say hi, feel free to drop me a message!
           </p>
           <SocialLinks />
         </div>

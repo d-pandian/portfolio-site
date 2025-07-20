@@ -5,7 +5,7 @@ import Container from "./Container";
 import Image from "next/image";
 import { hero } from "@/assets/image";
 import Statistics from "./Statistics";
-import Counter from "./Counter";
+
 
 const Banner = () => {
   return (
