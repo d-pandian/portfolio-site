@@ -1,0 +1,28 @@
+{% comment %}
+  ============================================================
+  PERSUAXION INTENT SDK
+  Docs: https://github.com/d-pandian/portfolio-site
+  Backend: https://backend-production-2811.up.railway.app
+  ============================================================
+{% endcomment %}
+
+<script src="{{ 'persuaxion.min.js' | asset_url }}" defer></script>
+<script>
+  (function () {
+    function bootPersuaxion() {
+      if (typeof Persuaxion === 'undefined') return;
+      Persuaxion.init({
+        shopDomain:  '{{ shop.permanent_domain }}',
+        apiEndpoint: 'https://backend-production-2811.up.railway.app/api/events'
+      });
+    }
+
+    // DOMContentLoaded ensures window.Shopify, window.meta, and
+    // window.ShopifyAnalytics are populated before the SDK reads them.
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', bootPersuaxion);
+    } else {
+      bootPersuaxion(); // already loaded (e.g. turbo-frame navigation)
+    }
+  })();
+</script>
