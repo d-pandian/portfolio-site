@@ -22,14 +22,10 @@ import { attachModalDetector   } from './detectors/modal.js';
 import { attachVariantDetector } from './detectors/variant.js';
 import { attachExitDetector    } from './detectors/exit.js';
 
-// ── BACKEND ENDPOINT ──────────────────────────────────────────
-// Centralized Persuaxion API. shopDomain is sent in every payload,
-// not in the URL, so the backend can attribute events per shop.
-const API_ENDPOINT = 'https://api.persuaxion.app/api/events';
-
 // ── INIT ──────────────────────────────────────────────────────
 
-function init({ shopDomain }) {
+function init({ shopDomain, apiEndpoint }) {
+  const API_ENDPOINT = apiEndpoint || 'https://api.persuaxion.app/api/events';
   const identity = resolveIdentity();
   const ctx      = resolveContext();
 
