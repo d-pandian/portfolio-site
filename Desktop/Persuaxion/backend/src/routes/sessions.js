@@ -30,7 +30,7 @@ router.get('/:session_id', async (req, res) => {
 
   try {
     // Run all four queries in parallel — no interdependencies
-    const [sessionResult, intentResult, signalsResult, transitionsResult, eventsResult] =
+    const [sessionResult, signalsResult, transitionsResult, eventsResult] =
       await Promise.all([
 
         // ── SESSION + INTENT STATE (single join) ────────────────
@@ -110,9 +110,6 @@ router.get('/:session_id', async (req, res) => {
           [session_id]
         ),
 
-        // intentResult placeholder — already handled in sessionResult join above
-        // (Promise.all needs 5 slots; intentResult is unused, kept for alignment)
-        Promise.resolve(null),
       ]);
 
     if (sessionResult.rows.length === 0) {
