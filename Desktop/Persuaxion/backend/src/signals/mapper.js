@@ -150,6 +150,37 @@ function mapToSignals(rawEvent) {
     }];
   }
 
+  // ── 7. PRODUCT VIEW ──────────────────────────────────────────
+  // Baseline entry signal. Every product page load emits this.
+  // Low score (+1) — presence alone is weak; combined signals matter.
+  if (event_type === 'product_view') {
+    return [{
+      signalType: FIT_SIGNALS.PRODUCT_VIEW,
+      scoreValue: SIGNAL_SCORES.PRODUCT_VIEW,
+      isExplicit: false,
+      metadata: {
+        product_id: rawEvent.product_id ?? null,
+        referrer:   rawEvent.metadata?.referrer ?? null,
+      },
+    }];
+  }
+
+  // ── 8. ADD TO CART ───────────────────────────────────────────
+  // Strongest commercial action signal. User clicked the ATC button.
+  // Scores +5 — equivalent to EXPLICIT_QUERY — because it is a
+  // direct purchasing action, not just an intent indicator.
+  if (event_type === 'add_to_cart') {
+    return [{
+      signalType: FIT_SIGNALS.ADD_TO_CART,
+      scoreValue: SIGNAL_SCORES.ADD_TO_CART,
+      isExplicit: false,
+      metadata: {
+        product_id: rawEvent.product_id    ?? null,
+        variant_id: rawEvent.metadata?.variant_id ?? null,
+      },
+    }];
+  }
+
   // No rule matched
   return [];
 }

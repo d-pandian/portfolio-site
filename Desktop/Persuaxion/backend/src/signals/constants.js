@@ -20,6 +20,10 @@ const FIT_SIGNALS = {
   // Chat signals — explicit intent
   EXPLICIT_QUERY:             'EXPLICIT_QUERY',             // +5, marks explicit_detected
   QUESTION_INDICATOR:         'QUESTION_INDICATOR',         // +1
+
+  // Commercial action signals — SDK-tracked DOM events
+  PRODUCT_VIEW:               'PRODUCT_VIEW',               // +1, baseline entry signal
+  ADD_TO_CART:                'ADD_TO_CART',                // +5, strongest commercial signal
 };
 
 const SIGNAL_SCORES = {
@@ -33,6 +37,8 @@ const SIGNAL_SCORES = {
   EXIT_HESITATION:           1,
   EXPLICIT_QUERY:            5,
   QUESTION_INDICATOR:        1,
+  PRODUCT_VIEW:              1,  // baseline — every product page load
+  ADD_TO_CART:               5,  // strongest commercial action signal
 };
 
 // Maximum number of VARIANT_EXPLORATION signals counted in the rolling window

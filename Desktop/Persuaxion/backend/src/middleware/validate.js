@@ -22,6 +22,8 @@ const VALID_EVENT_TYPES = new Set([
   'exit_intent',
   'chat_open',
   'chat_message',
+  'product_view',
+  'add_to_cart',
 ]);
 
 /**
